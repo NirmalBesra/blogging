@@ -1,0 +1,24 @@
+{
+  "name": "blogging",
+  "version": "1.0.0",
+  "description": "blogging website",
+  "keywords": [
+    "NA"
+  ],
+  "homepage": "https://github.com/NirmalBesra/blogging#readme",
+  "bugs": {
+    "url": "https://github.com/NirmalBesra/blogging/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NirmalBesra/blogging.git"
+  },
+  "license": "ISC",
+  "author": "Nirmal, Akash, Jyoti Prakash",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  }
+}
