@@ -1,0 +1,156 @@
+*{ box-sizing: border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  background: #EFEFEC;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(20,22,26,0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #14161A;
+  padding: 24px;
+}
+
+/* top panel holding the toggle buttons */
+.panel{
+  width: 100%;
+  max-width: 400px;
+}
+
+.changeto{
+  display: flex;
+  background: #FBFBFA;
+  border: 1px solid #D8D8D3;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+
+.tab-btn{
+  flex: 1;
+  padding: 18px 0;
+  background: transparent;
+  border: none;
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  color: #6B6E72;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.tab-btn.active{
+  color: #14161A;
+}
+
+.tab-btn.active::after{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #3D5AFE;
+}
+
+.tab-btn:not(.active):hover{
+  color: #14161A;
+  background: #E7EAFF;
+}
+
+/* main card holding both forms */
+.main{
+  width: 100%;
+  max-width: 400px;
+  background: #FBFBFA;
+  border: 1px solid #D8D8D3;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 6px 6px 0 #14161A;
+  padding: 36px 32px 32px;
+}
+
+.main form{
+  display: block;
+}
+
+.main p{
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fe3d3d;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.main h1{
+  font-family: 'Georgia', serif;
+  font-size: 26px;
+  margin: 0 0 26px;
+  line-height: 1.2;
+}
+
+/* second form needs a little breathing room above it */
+.main form + form{
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px dashed #D8D8D3;
+}
+
+.fld,
+.signfld{
+  margin-bottom: 18px;
+}
+
+label{
+  display: block;
+  font-size: 12px;
+  color: #6B6E72;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+input{
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #D8D8D3;
+  border-radius: 3px;
+  background: #fff;
+  font-size: 14px;
+  color: #14161A;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus{
+  border-color: #3D5AFE;
+  box-shadow: 0 0 0 3px #E7EAFF;
+}
+
+.submit-btn{
+  width: 100%;
+  padding: 13px 0;
+  margin-top: 8px;
+  background: #14161A;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover{
+  background: #3D5AFE;
+}
+
+.submit-btn:active{
+  transform: translateY(1px);
+}
