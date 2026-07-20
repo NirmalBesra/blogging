@@ -1,28 +1,22 @@
-var star = 0;
+var starcolor = ["rgb(241, 89, 89)","rgb(241, 157, 89)","rgb(241, 226, 89)","rgb(188, 241, 89)","rgb(124, 241, 89)"];
 window.onload = function(){
     let cnode = Object.keys(document.getElementById("starsBlank").children);
    console.log( document.getElementById("starsBlank").children.length);
     console.log(cnode);
    cnode.forEach((x,idx)=>{
     console.log(idx);
+    let colorVar = starcolor[idx];
         document.getElementById(`star${idx+1}`).onmouseover = function(e){
-            // console.log("star"+(idx+1));
             console.log( e.currentTarget.previousElementSibling);
-
+            document.getElementById(`star${idx+1}`).style.color = colorVar;
+            console.log(idx);
+            for(let i=idx;i>0;i--){
+                document.getElementById(`star${idx}`).style.color = colorVar;
+            }
             }
    })
 }
-  /* document.getElementById("star3").onmouseover = function() {
-    //document.getElementById("star1").style.color = "red"
-    //document.getElementById("star1").previousElementSibling
-    console.log(Object.keys(document.getElementById("starsBlank").children));
-
-        
-    
-}
-document.getElementById("star3").onmouseout = function() {
-    //document.getElementById("star1").style.color = "darkkhaki"
-}*/
+  
 
 function recfun(obj){
     if(!obj) return
