@@ -5,21 +5,20 @@ window.onload = function(){
     console.log(cnode);
    cnode.forEach((x,idx)=>{
     console.log(idx);
-    let colorVar = starcolor[idx];
+    
         document.getElementById(`star${idx+1}`).onmouseover = function(e){
-            console.log( e.currentTarget.previousElementSibling);
+            let colorVar = starcolor[idx];
             document.getElementById(`star${idx+1}`).style.color = colorVar;
-            console.log(idx);
             for(let i=idx;i>0;i--){
-                document.getElementById(`star${idx}`).style.color = colorVar;
+                document.getElementById(`star${i}`).style.color = colorVar;
             }
             }
+        document.getElementById(`star${idx+1}`).onmouseout = function(e){
+           document.getElementById(`star${idx+1}`).style.color = "darkkhaki"; 
+            for(let i=idx;i>0;i--){
+                document.getElementById(`star${i}`).style.color = "darkkhaki";
+            }
+        }
    })
 }
   
-
-function recfun(obj){
-    if(!obj) return
-    obj.previousElementSibling.style.color = "red";
-     
-}
