@@ -3,19 +3,18 @@ window.onload = function(){
     let cnode = document.querySelectorAll("#starsBlank span");
 
    cnode.forEach((x,idx)=>{
-        x.onmouseenter = function(e){
-            let colorVar = starcolor[idx];
+    let colorVar;
+        x.addEventListener("mouseenter",(e)=>{colorVar = starcolor[idx];
             x.style.color = colorVar;
             for(let i=idx;i>=0;i--){
                 cnode[i].style.color = colorVar;
-            }
-            }
-        x.onmouseleave  = function(e){
+            }}); 
+        x.addEventListener( "mouseleave" ,(e)=>{
            x.style.color = "darkkhaki"; 
             for(let i=idx;i>=0;i--){
-                cnode[i].style.color = "darkkhaki";
+                cnode[i].style.color = "darkkhaki"; 
             }
-        }
+        });
    })
 }
   
