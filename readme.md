@@ -43,3 +43,5 @@ posts
     4. better-sqlite3
     5. Path
     6. bcrypt
+POSTS Table Schema
+postID, postName, date, ratings, author, category, moderator
