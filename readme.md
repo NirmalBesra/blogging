@@ -46,4 +46,4 @@ posts
 
     
 POSTS Table Schema
-postID, postName, date, ratings, author, category, moderator
+postID, postName, postData, postImgJ ,date, ratings, author, category, moderator
