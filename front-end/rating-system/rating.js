@@ -12,6 +12,7 @@ window.onload = function(){
                 
             }}); 
         x.addEventListener("click",async (e)=>{
+            console.log("it was clicked "+(idx+1));
             const requestOptions = {
                 method: "POST",
                 headers: {
@@ -22,7 +23,7 @@ window.onload = function(){
                     postId: 0
                 })
             }
-            if(true){
+            if(false){
                 try{
                     const response = await fetch("https:\\localhost:8080\rating",requestOptions);
                     if(!response.ok) throw new Error(`Status: ${response.status}`);
