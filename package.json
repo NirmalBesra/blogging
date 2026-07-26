@@ -1,0 +1,23 @@
+{
+  "name": "blogging",
+  "version": "1.0.0",
+  "description": "blogging\r - users (end users > publisher > moderator > admin)\r - posts handling\r - login/register\r - file upload\r - comments\r - ratings\r - gallery\r - verify/ approval of posts --> \r - moderators\r - register + middleware - jp7\r - login - akash\r .env\r - posts handling - nirmal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NirmalBesra/blogging.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NirmalBesra/blogging/issues"
+  },
+  "homepage": "https://github.com/NirmalBesra/blogging#readme",
+  "dependencies": {
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1"
+  }
+}

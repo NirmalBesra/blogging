@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 app.use(express.json());
-const db = require('../db');
+const db = require('../db/db');
 app.get("/getRatings", async(req,res,next)=>{
     try{
         console.log("fetching the ratings");
@@ -27,4 +27,9 @@ app.put("/addRatings", (req,res,next)=>{
         console.err(e);
 
     }
+});
+
+
+app.listen(8181,()=>{
+    console.log("server is running");
 });
