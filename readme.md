@@ -47,3 +47,6 @@ posts
     
 POSTS Table Schema
 postID, postName, postData, postImgJ ,date, ratings, author, category, moderator
+
+USERS TABLE SCHEMA
+userId, userName, userMail, userPassword, age, token, permission, created
