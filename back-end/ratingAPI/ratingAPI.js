@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 app.use(express.json());
-const db = require('../db/db');
+const db = require('../db/dbjs');
 app.get("/getRatings", async(req,res,next)=>{
     try{
         console.log("fetching the ratings");
@@ -10,8 +10,8 @@ app.get("/getRatings", async(req,res,next)=>{
         res.status(200).json(records);
     }
     catch(e){
-        res.status(500).json({error:err.message});
-        console.err(e);
+        res.status(500).json({error:e.message});
+        console.error(e);
     }
 });
 
@@ -28,6 +28,20 @@ app.put("/addRatings", (req,res,next)=>{
 
     }
 });
+
+// app.post("/addPost", (req,res,next)=>{
+//     try
+//     {
+//         const stmt = db.prepare('INSERT into posts values');
+//         stmt.run(req.query.ratings,req.query.postID);
+//         res.send('Success, rating was updated');
+//     }
+//     catch(e)
+//     {
+//         console.err(e);
+
+//     }
+// });
 
 
 app.listen(8181,()=>{
