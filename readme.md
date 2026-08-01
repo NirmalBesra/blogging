@@ -23,7 +23,7 @@ USERS
 
 -> admin (admin)
 -> end user- registered or unregistered
--> publisher-> (approved basis on some criteria)
+-> publisher-> (approved basis on some criteria) doubt?
 -> moderator-> min 10 posts/ activity basis
 
 ---
@@ -46,4 +46,15 @@ posts
 
     
 POSTS Table Schema
-postID, postName, postData, postImgJ ,date, ratings, author, category, moderator
+postId (auto increment, unique, PK ), postName, postData, postImgJ ,date, ratings, author, category, moderator
+
+ratecomment Table Schema
+rateId (auto increment, unique, PK ), userId, postId, rating, comment, datetime, commentIndex, visibilty (bool)
+
+user table schema
+userId (auto increment, unique, PK ), emailId (unique), name, age, date (auto generated) , password, image, role
+
+Table Cardinality
+posts * - 1 user
+ratecomment 1 - * posts
+user 1 - * ratecomment
