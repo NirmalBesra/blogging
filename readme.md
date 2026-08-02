@@ -56,5 +56,5 @@ userId (auto increment, unique, PK ), emailId (unique), name, age, date (auto ge
 
 Table Cardinality
 posts * - 1 user
-ratecomment 1 - * posts
+ratecomment 1 - * posts?
 user 1 - * ratecomment
