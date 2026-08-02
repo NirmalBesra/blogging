@@ -16,7 +16,6 @@ body{
   padding: 24px;
 }
 
-/* top panel holding the toggle buttons */
 .panel{
   width: 100%;
   max-width: 400px;
@@ -64,7 +63,7 @@ body{
   background: #E7EAFF;
 }
 
-/
+
 .main{
   width: 100%;
   max-width: 400px;
