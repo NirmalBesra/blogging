@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        input {
+            width: 300px;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            min-height: 18px;
+        }
+
+        #errorPasswordInfo {
+            color: #666;
+            font-size: 13px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="signupForm">
+
+        <label for="fullName">Full Name</label><br>
+        <input type="text" id="fullName">
+        <div id="error-fullName" class="error"></div>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email">
+        <div id="error-email" class="error"></div>
+
+        <label for="age">Age</label><br>
+        <input type="number" id="age">
+        <div id="error-age" class="error"></div>
+
+        <label for="newPassword">New Password</label><br>
+        <input type="password" id="newPassword">
+        <div id="error-newPassword" class="error"></div>
+        <div id="errorPasswordInfo"></div>
+
+        <label for="verifyPassword">Verify Password</label><br>
+        <input type="password" id="verifyPassword">
+        <div id="error-verifyPassword" class="error"></div>
+
+        <br>
+
+        <button type="submit">Create Account</button>
+
+    </form>
+
+    <script src="../js/pages/signup.js"></script>
+
+</body>
+
+</html>

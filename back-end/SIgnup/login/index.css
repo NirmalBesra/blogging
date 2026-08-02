@@ -64,11 +64,11 @@ body{
   background: #E7EAFF;
 }
 
-/* main card holding both forms */
+/
 .main{
   width: 100%;
   max-width: 400px;
-  background: #FBFBFA;
+  background: #747407;
   border: 1px solid #D8D8D3;
   border-radius: 0 0 4px 4px;
   box-shadow: 6px 6px 0 #14161A;
@@ -95,7 +95,7 @@ body{
   line-height: 1.2;
 }
 
-/* second form needs a little breathing room above it */
+
 .main form + form{
   margin-top: 32px;
   padding-top: 28px;
